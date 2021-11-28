@@ -19,7 +19,7 @@
 
 <body>
 
-<!-- Главный контейнер -->
+<!-- Main container -->
 <div class="container-fluid d-flex flex-column vh-100 p-0 user-select-none" style="padding-bottom: 180px !important;
     overflow: auto;">
     <!-- intro -->
@@ -100,9 +100,9 @@
             </div>  
         </a>
 
-        <!-- button -->
-        <a href="НачатьРучнойВыборНоменклатуры" class="button button__indent">
-            <div class="title button__title">Ручной выбор </div>
+        <!-- test-button -->
+        <button href="" class="button button__indent ripple">
+            <div class="title button__title">Последний документ </div>
             <div class="button__arrow d-flex justify-content-center align-items-center">
                 <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_51_3)">
@@ -114,12 +114,15 @@
                     <rect width="11" height="18" fill="white" transform="translate(11 18) rotate(-180)"/>
                     </clipPath>
                     </defs>
-                    </svg>
-            </div> 
-        </a>
+                    </svg>    
+            </div>  
+        </button>
+
+        <div class="ripple button">click</div>
+
     </div>
     
-    <!-- c-panel -->
+    <!-- control panel.  -->
     <div class="c-panel container-fluid d-flex justify-content-center position-fixed fixed-bottom p-0 align-items-center">
         <!-- dlc-btn -->
         <a href="ОткрытьСписокДокументов" class="dlc-button d-flex justify-content-center align-items-center">
@@ -151,6 +154,31 @@
         </a>
     </div>
 </div>
+
+<script>
+    const buttons = document.querySelectorAll(".ripple") 
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            const x = e.clientX
+            const y = e.clientY
+
+            const buttonTop = e.target.offsetTop
+            const buttonLeft = e.target.offsetLeft
+
+            const xInside = x - buttonLeft
+            const yInside = y - buttonTop
+            
+            const circle = document.createElement('span')
+            circle.classList.add('circle')
+            circle.style.top = yInside + "px"
+            circle.style.left = xInside + "px"
+
+            this.appendChild(circle)
+        })
+    })
+</script>
+
 </body>
 
 </html>
