@@ -22,6 +22,11 @@ a {
     color: black;
 }
 
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 /* variables */
 .title {
     font-family: "Manrope";
@@ -61,11 +66,11 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.12);
     border-radius: 33px;
+    padding: 30px;
 }
 
 .box__indent {
     margin: 25px 28px 0px 28px;
-    padding: 30px;
 }
 
 .box__subtitle {
@@ -148,6 +153,8 @@ input:checked + .slider:before {
     position: relative;
     transition: all 0.1s ease-out;
     cursor: pointer;
+    overflow: hidden;
+    padding: 16px 30px;
 }
 
 .button__title {
@@ -156,12 +163,7 @@ input:checked + .slider:before {
 
 .button__indent {
     margin: 20px 28px 0 28px;
-    padding: 16px 30px;
 }
-
-/* .button:active {
-    transform: scale(1.1, 1.1);
-} */
 
 .button__arrow {
     content: "";
@@ -175,19 +177,21 @@ input:checked + .slider:before {
     transform: translate(-14px, -50%);
 }
 
-button {
-    position: relative;
+/* Effect ripple */
+
+.effect-ripple {
     overflow: hidden;
+    position: relative;
 }
 
 .circle {
     position: absolute;
-    background-color: white;
+    background-color: #E8E8E8;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
-    animation: scale 0.7s ease-out;
+    animation: scale 0.4s ease-out;
 }
 
 @keyframes scale {
@@ -239,14 +243,11 @@ button {
     background: #F2F2F2;
     border-radius: 33px;
     transition: all 0.1s ease-out;
-}
-
-.select-button__indent {
     padding: 13px 20px;
 }
 
 .select-button:active {
-    background: #D6D6D6;
+    background: #DFDFDF;
     color: black;
 }
 
