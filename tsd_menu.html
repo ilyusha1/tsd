@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Чат с менеджером</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="description" name="description">
+    <link href='css/bootstrap.css' rel='stylesheet'>
+    <link href='css/main.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+
+<!-- Главный контейнер -->
+<div class="container-fluid d-flex flex-column vh-100 p-0 user-select-none" style="padding-bottom: 180px !important;
+    overflow: auto;">
+    <!-- intro -->
+    <div class="intro container-fluid d-flex flex-column p-0">
+
+        <!-- title -->
+        <div class="title intro__title container-fluid text-center p-0">
+            Настройки сканирования
+        </div>
+
+        <!-- box -->
+        <div class="box box__indent">
+            <!-- switch -->
+			<div href="" class="d-flex align-items-center content-margin">
+				<label class="switch">
+					<a href="">
+						<input type="checkbox" id="МножественноеСканирование">
+						<span class="slider round"></span>
+					</a>
+				</label>
+				<div class="subtitle box__subtitle">Множественный выбор</div>
+			</div>
+
+            <!-- switch -->
+            <div href="ОбработатьФлагПоМестамХранения" class="d-flex align-items-center content-margin">
+				<label class="switch">
+					<a href="ОбработатьФлагПоМестамХранения">
+						<input type="checkbox" id="ПоМестамХранения">
+						<span class="slider round"></span>
+					</a>
+				</label>
+				<div class="subtitle box__subtitle">По местам хранения</div>
+			</div>
+        </div>
+
+        <!-- box -->
+        <div class="box box__indent" id="ГруппаПоМестамХранения">
+            <div class="subtitle content-margin d-flex">Место хранения: &nbsp; <p id="МестоХранения" style="color: #FF9675; font-weight: 800;"> склад</p></div>
+            <div class="d-flex content-margin">
+                <a href="ВыбратьМестоХранения" class="select-button select-button__indent">Выбрать место хранения</a>
+                <a href="НачатьСканирование" class="select-qr-button select-qr-button__indent d-flex justify-content-center align-items-center"><svg width="19px" height="19px" data-name="Layer 1" viewBox="0 0 24 24"><path fill="black" d="M8,21H4a1,1,0,0,1-1-1V16a1,1,0,0,0-2,0v4a3,3,0,0,0,3,3H8a1,1,0,0,0,0-2Zm14-6a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H16a1,1,0,0,0,0,2h4a3,3,0,0,0,3-3V16A1,1,0,0,0,22,15ZM20,1H16a1,1,0,0,0,0,2h4a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V4A3,3,0,0,0,20,1ZM2,9A1,1,0,0,0,3,8V4A1,1,0,0,1,4,3H8A1,1,0,0,0,8,1H4A3,3,0,0,0,1,4V8A1,1,0,0,0,2,9Zm8-4H6A1,1,0,0,0,5,6v4a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V6A1,1,0,0,0,10,5ZM9,9H7V7H9Zm5,2h4a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H14a1,1,0,0,0-1,1v4A1,1,0,0,0,14,11Zm1-4h2V9H15Zm-5,6H6a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V14A1,1,0,0,0,10,13ZM9,17H7V15H9Zm5-1a1,1,0,0,0,1-1,1,1,0,0,0,0-2H14a1,1,0,0,0-1,1v1A1,1,0,0,0,14,16Zm4-3a1,1,0,0,0-1,1v3a1,1,0,0,0,0,2h1a1,1,0,0,0,1-1V14A1,1,0,0,0,18,13Zm-4,4a1,1,0,1,0,1,1A1,1,0,0,0,14,17Z"/></svg></a>
+            </div>
+        </div>
+
+        <!-- button -->
+        <a href="ОткрытьСписокДокументов" class="button button__indent">
+            <div class="title button__title">Cписок документов</div>
+            <div class="button__arrow d-flex justify-content-center align-items-center">
+                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_51_3)">
+                    <rect width="11" height="18" transform="translate(11 18) rotate(-180)" fill="white"/>
+                    <path d="M9.78433 8.21575C10.2175 8.64888 10.2175 9.35112 9.78433 9.78425L2.72612 16.8425C2.29299 17.2756 1.59076 17.2756 1.15763 16.8425C0.724502 16.4093 0.724502 15.7071 1.15763 15.274L7.43159 9L1.15763 2.72603C0.724503 2.29291 0.724503 1.59067 1.15763 1.15754C1.59076 0.724415 2.29299 0.724415 2.72612 1.15754L9.78433 8.21575ZM7.97803 7.89091L9.00009 7.89091L9.00009 10.1091L7.97803 10.1091L7.97803 7.89091Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_51_3">
+                    <rect width="11" height="18" fill="white" transform="translate(11 18) rotate(-180)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>   
+            </div> 
+        </a>
+
+        <!-- button -->
+        <a href="ОткрытьПоследнийДокумент" class="button button__indent">
+            <div class="title button__title">Последний документ </div>
+            <div class="button__arrow d-flex justify-content-center align-items-center">
+                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_51_3)">
+                    <rect width="11" height="18" transform="translate(11 18) rotate(-180)" fill="white"/>
+                    <path d="M9.78433 8.21575C10.2175 8.64888 10.2175 9.35112 9.78433 9.78425L2.72612 16.8425C2.29299 17.2756 1.59076 17.2756 1.15763 16.8425C0.724502 16.4093 0.724502 15.7071 1.15763 15.274L7.43159 9L1.15763 2.72603C0.724503 2.29291 0.724503 1.59067 1.15763 1.15754C1.59076 0.724415 2.29299 0.724415 2.72612 1.15754L9.78433 8.21575ZM7.97803 7.89091L9.00009 7.89091L9.00009 10.1091L7.97803 10.1091L7.97803 7.89091Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_51_3">
+                    <rect width="11" height="18" fill="white" transform="translate(11 18) rotate(-180)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>    
+            </div>  
+        </a>
+
+        <!-- button -->
+        <a href="НачатьРучнойВыборНоменклатуры" class="button button__indent">
+            <div class="title button__title">Ручной выбор </div>
+            <div class="button__arrow d-flex justify-content-center align-items-center">
+                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_51_3)">
+                    <rect width="11" height="18" transform="translate(11 18) rotate(-180)" fill="white"/>
+                    <path d="M9.78433 8.21575C10.2175 8.64888 10.2175 9.35112 9.78433 9.78425L2.72612 16.8425C2.29299 17.2756 1.59076 17.2756 1.15763 16.8425C0.724502 16.4093 0.724502 15.7071 1.15763 15.274L7.43159 9L1.15763 2.72603C0.724503 2.29291 0.724503 1.59067 1.15763 1.15754C1.59076 0.724415 2.29299 0.724415 2.72612 1.15754L9.78433 8.21575ZM7.97803 7.89091L9.00009 7.89091L9.00009 10.1091L7.97803 10.1091L7.97803 7.89091Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_51_3">
+                    <rect width="11" height="18" fill="white" transform="translate(11 18) rotate(-180)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+            </div> 
+        </a>
+    </div>
+    
+    <!-- c-panel -->
+    <div class="c-panel container-fluid d-flex justify-content-center position-fixed fixed-bottom p-0 align-items-center">
+        <!-- dlc-btn -->
+        <a href="ОткрытьСписокДокументов" class="dlc-button d-flex justify-content-center align-items-center">
+            <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: black;
+                    }
+                  </style>
+                </defs>
+                <title>file</title>
+                <g>
+                  <path class="cls-1" d="M12.23,7.63h.87a.87.87,0,0,0,0-1.74h-.87a.87.87,0,0,0,0,1.74Zm0,1.73a.87.87,0,1,0,0,1.73h5.2a.87.87,0,1,0,0-1.73Zm9.53-2.65a2,2,0,0,0-.05-.24V6.39a1,1,0,0,0-.17-.24h0L16.35,1h0A1.32,1.32,0,0,0,16.1.79H16a1,1,0,0,0-.29-.1H10.5a2.6,2.6,0,0,0-2.6,2.6V15.42A2.59,2.59,0,0,0,10.5,18h8.66a2.59,2.59,0,0,0,2.6-2.6V6.71Zm-5.2-3.06,2.25,2.24H17.43A.87.87,0,0,1,16.56,5ZM20,15.42a.87.87,0,0,1-.87.87H10.5a.87.87,0,0,1-.87-.87V3.29a.86.86,0,0,1,.87-.86h4.33V5a2.6,2.6,0,0,0,2.6,2.6H20Zm-2.6-2.6h-5.2a.87.87,0,0,0,0,1.74h5.2a.87.87,0,0,0,0-1.74Z"/>
+                  <path class="cls-1" d="M17.07,18v.1a.86.86,0,0,1-.86.87H7.54a.87.87,0,0,1-.86-.87V6a.87.87,0,0,1,.86-.87H7.9V3.4H7.54A2.59,2.59,0,0,0,5,6V18.12a2.59,2.59,0,0,0,2.59,2.6h8.67a2.6,2.6,0,0,0,2.6-2.6V18Z"/>
+                  <path class="cls-1" d="M14.37,20.6v.11a.86.86,0,0,1-.87.86H4.84A.86.86,0,0,1,4,20.71V8.58a.87.87,0,0,1,.87-.87h.35V6H4.84a2.59,2.59,0,0,0-2.6,2.6V20.71a2.6,2.6,0,0,0,2.6,2.6H13.5a2.6,2.6,0,0,0,2.6-2.6V20.6Z"/>
+                </g>
+              </svg> 
+        </a>
+
+        <!-- main-btn -->
+        <a href="НачатьСканирование" class="scn-button scn-button__indent d-flex justify-content-center align-items-center">
+            <svg width="50px" height="50px" data-name="Layer 1" viewBox="0 0 24 24"><path fill="white" d="M8,21H4a1,1,0,0,1-1-1V16a1,1,0,0,0-2,0v4a3,3,0,0,0,3,3H8a1,1,0,0,0,0-2Zm14-6a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H16a1,1,0,0,0,0,2h4a3,3,0,0,0,3-3V16A1,1,0,0,0,22,15ZM20,1H16a1,1,0,0,0,0,2h4a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V4A3,3,0,0,0,20,1ZM2,9A1,1,0,0,0,3,8V4A1,1,0,0,1,4,3H8A1,1,0,0,0,8,1H4A3,3,0,0,0,1,4V8A1,1,0,0,0,2,9Zm8-4H6A1,1,0,0,0,5,6v4a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V6A1,1,0,0,0,10,5ZM9,9H7V7H9Zm5,2h4a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H14a1,1,0,0,0-1,1v4A1,1,0,0,0,14,11Zm1-4h2V9H15Zm-5,6H6a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1V14A1,1,0,0,0,10,13ZM9,17H7V15H9Zm5-1a1,1,0,0,0,1-1,1,1,0,0,0,0-2H14a1,1,0,0,0-1,1v1A1,1,0,0,0,14,16Zm4-3a1,1,0,0,0-1,1v3a1,1,0,0,0,0,2h1a1,1,0,0,0,1-1V14A1,1,0,0,0,18,13Zm-4,4a1,1,0,1,0,1,1A1,1,0,0,0,14,17Z"/></svg>
+        </a>
+
+        <!-- dlc-btn -->
+        <a href="НачатьРучнойВыборНоменклатуры" class="dlc-button d-flex justify-content-center align-items-center">
+            <svg  width="30px" height="30px" viewBox="0 0 24 24"><path fill= "black" d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"/></svg>
+        </a>
+    </div>
+</div>
+</body>
+
+</html>

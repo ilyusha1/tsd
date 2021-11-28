@@ -1,0 +1,240 @@
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* variables */
+.title {
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+.subtitle {
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.label {
+    color: black;
+}
+
+.content-margin + .content-margin {
+    margin-top: 20px;
+}
+
+/* ---- tsd sections ---- */
+
+.intro {}
+
+.intro__title {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+
+/* ---- all elements ---- */
+
+/* box element */
+.box {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.12);
+    border-radius: 33px;
+}
+
+.box__indent {
+    margin: 25px 28px 0px 28px;
+    padding: 30px;
+}
+
+.box__subtitle {
+    margin-left: 20px;
+    line-height: 1;
+}
+
+/* control panel element */
+
+.c-panel {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.1);
+    border-radius: 62px 62px 0 0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    min-width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background: linear-gradient(268.12deg, #FF9675 1.23%, #8348FF 155.23%);
+}
+
+input:focus + .slider {
+    background: linear-gradient(268.12deg, #FF9675 1.23%, #8348FF 155.23%);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ---- all buttons ---- */
+
+/* default button */
+.button {
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.12);
+    border-radius: 33px;
+    background: linear-gradient(267.38deg, #8348FF -15.42%, #FF9675 70.46%);
+    position: relative;
+    transition: all 0.1s ease-out;
+}
+
+.button__title {
+    color: white;
+}
+
+.button__indent {
+    margin: 20px 28px 0 28px;
+    padding: 16px 30px;
+}
+
+.button:active {
+    transform: scale(1.1, 1.1);
+}
+
+.button__arrow {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 35px;
+    background-color: white;
+    transform: translate(-14px, -50%);
+}
+
+/* scn-button */
+.scn-button {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(149.17deg, #8348FF 14.93%, #FF9675 94.71%);
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.12);
+    border-radius: 84px;
+    transition: all 0.1s ease-out;
+}
+
+.scn-button__indent {
+    margin: 20px 16px;
+}
+
+.scn-button:active {
+    transform: scale(1.1, 1.1);
+}
+
+/* dlc-button */
+.dlc-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 84px;
+    background-color: #E7E7E7;
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.12);
+    transition: all 0.1s ease-out;
+}
+
+.dlc-button:active {
+    background: #D6D6D6;
+}
+
+/* select-button */
+.select-button {
+    color: black;
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 13px;
+    background: #F2F2F2;
+    border-radius: 33px;
+    transition: all 0.1s ease-out;
+}
+
+.select-button__indent {
+    padding: 13px 20px;
+}
+
+.select-button:active {
+    background: #D6D6D6;
+    color: black;
+}
+
+/* select-qr-button */
+.select-qr-button {
+    height: 45.5px;
+    min-width: 45.5px;
+    background: #F2F2F2;
+    border-radius: 33px;
+    transition: all 0.1s ease-out;
+}
+
+.select-qr-button__indent {
+    margin-left: 10px;
+}
+
+.select-qr-button:active {
+    background: #D6D6D6;
+}
