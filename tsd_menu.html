@@ -121,7 +121,7 @@
     </div>
     
     <!-- control panel.  -->
-    <div class="c-panel container-fluid d-flex justify-content-center position-fixed fixed-bottom p-0 align-items-center">
+    <div class="c-pa    nel container-fluid d-flex justify-content-center position-fixed fixed-bottom p-0 align-items-center">
         <!-- dlc-btn -->
         <a href="ОткрытьСписокДокументов" class="dlc-button d-flex justify-content-center align-items-center">
             <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px">
@@ -160,7 +160,7 @@
         button.addEventListener('click', function (e) {
             const x = e.clientX
             const y = e.clientY
-
+            
             const buttonTop = e.target.offsetTop
             const buttonLeft = e.target.offsetLeft
 
@@ -173,6 +173,8 @@
             circle.style.left = xInside + "px"
 
             this.appendChild(circle)
+
+            // setTimeout(() => circle.remove(), 500)
         })
     })
 </script>
